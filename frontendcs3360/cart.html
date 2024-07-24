@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart | E-commerce</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/cart.css" />
+  </head>
+  <body>
+    <header>
+      <h1>CLOTHES & ACCESSORIES STORE</h1>
+      <nav class="brand-nav">
+        <a href="product.html">Home</a>
+        <a href="cart.html">Cart</a>
+      </nav>
+    </header>
+    <section class="main-content">
+      <div class="cart-summary-container">
+        <div class="order-history-link">
+          <a href="orderhistory.html" id="orderHistoryLink">Order History</a>
+        </div>
+        <h2>Cart</h2>
+        <div class="cart-table-wrapper">
+          <table class="table-auto w-full" id="cart-table">
+            <thead>
+              <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="cart-body">
+              <!-- Cart items will be dynamically added here -->
+            </tbody>
+          </table>
+          <div class="empty-cart-message" id="empty-cart-message">
+            Your cart is empty.
+          </div>
+        </div>
+        <div class="total-amount" id="total-amount">Total: $0.00</div>
+        <div class="checkout-btn-container hidden" id="checkout-btn-container">
+          <button class="purchase-btn" onclick="confirmCheckout()">
+            Purchase
+          </button>
+        </div>
+      </div>
+    </section>
+    <div>
+      
+      <!-- <input type="number" value="${
+        item.quantity
+      }" min="1" data-index="${index}" class="quantity-input"> -->
+    </div>
+    <footer>
+      <p>&copy; 2024 CS 3360. All rights reserved.</p>
+    </footer>
+    <script src="js/renderCart.js"></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | E-commerce</title>
+  <link rel="stylesheet" href="css/product.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+  <!-- UI Slider library -->
+</head>
+
+<body>
+  <header>
+    <h1>CLOTHES & ACCESSORIES STORE</h1>
+    <nav class="brand-nav">
+      <a href="product.html" class="active bubble-link">Home</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+  <section class="main-content">
+    <div class="sidebar">
+      <div class="input-search">
+        <label for="searchInput">Search Product:</label>
+        <input type="text" id="product-search-input" placeholder="Enter product name" />
+        <button onclick="searchProducts()">Search</button>
+      </div>
+      
+        <h3>
+          Total items in the cart: <span id="number-of-items-in-cart"></span>
+        </h3>
+        <button class="cart-button" onclick="window.location.href='cart.html'">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Cart</span>
+        </button>
+        <div style="margin-top: 20px">
+          <div id="warning-message" style="color: red; margin: 1cm 0;"></div>
+          <button onclick="toggleCustomerInfo()" id="customer-info-button">
+            Customer Information
+          </button>
+          <div id="customer-info-container" style="display: none">
+            <label for="customer-phoneNumber-input">Phone Number:</label>
+            <input type="text" id="customer-phoneNumber-input" placeholder="Enter your phone number" />
+            <label for="customer-name-input">Customer Name:</label>
+            <input type="text" id="customer-name-input" placeholder="Enter your full name" />
+            <label for="customer-address-input">Address:</label>
+            <input type="text" id="customer-address-input" placeholder="Enter your address" />
+  
+            <div class="button-container">
+              <button onclick="signOut()">Sign Out</button>
+              <button onclick="postCustomerInfo()">Submit</button>
+            </div>
+            <p id="message"></p>
+          </div>
+        </div>
+        <div style="margin-top: 20px">
+      </div>
+    </div>
+    <div class="main-content-right">
+      <div class="filter-buttons">
+        <div class="dropdown">
+          <button class="dropbtn">Sort By</button>
+          <div class="dropdown-content">
+            <a href="#" onclick="displayAscendingOrder()">Lowest to Highest</a>
+            <a href="#" onclick="displayDescendingOrder()">Highest to Lowest</a>
+          </div>
+        </div>
+      </div>
+      <h2>Clothes</h2>
+      <div id="clothes-section" class="product-section">
+        <!-- Clothes Products will be rendered here -->
+      </div>
+      <h2>Accessories</h2>
+      <div id="accessories-section" class="product-section">
+        <!-- Accessories Products will be rendered here -->
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2024 CS 3360. All rights reserved.</p>
+  </footer>
+  <script src="./js/script.js"></script>
+  <script src="./js/renderProduct.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+1. Mô hình MVC (Model-View-Controller) 
+- Mô hình thiết kế phần mềm phổ biến trong phát triển ứng dụng. 
+- Tách biệt các thành phần của ứng dụng để dễ dàng quản lý và phát triển
+
+- Models: 
++ Xử lý dữ liệu và logic của ứng dụng
++ Đại diện cho dữ liệu và cung cấp các phương thức để truy xuất, cập nhật và xử lý dữ liệu. 
+
+- Views: 
++ Hiển thị dữ liệu cho người dùng
++ Đại diện cho giao diện người dùng và thường được sử dụng để hiển thị dữ liệu từ Models. 
+
+- Controllers: 
++ Thành phần trung gian giữa Models và Views. 
++ Nhận lệnh từ người dùng thông qua giao diện người dùng 
++ Tương tác với Models để lấy dữ liệu hoặc cập nhật dữ liệu. 
++ Sau đó, Controllers sẽ cập nhật Views để hiển thị dữ liệu mới cho người dùng.
+
+2. HTTP Request methods
+- GET: Lấy dữ liệu (Ex: get product's list, user's detail,...)
+- POST: Insert dữ liệu (Ex: create new order, insert new product,...)
+- PUT: Update dữ liệu (Ex: update user's profile, update product's detail...)
+- DELETE: Xóa dữ liệu (Ex: remove an order, delete product)
+
+3. CRUD
+- CRUD là viết tắt của Create, Read, Update và Delete:
++ Create: Tạo mới một bản ghi trong cơ sở dữ liệu.
++ Read: Đọc thông tin từ một hoặc nhiều bản ghi trong cơ sở dữ liệu.
++ Update: Cập nhật thông tin cho một bản ghi đã tồn tại trong cơ sở dữ liệu.
++ Delete: Xóa một bản ghi khỏi cơ sở dữ liệu.

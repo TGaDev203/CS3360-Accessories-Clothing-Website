@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History | E-commerce</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/orderhistory.css" />
+  </head>
+  <body>
+    <header>
+      <h1>CLOTHES & ACCESSORIES STORE</h1>
+      <nav class="brand-nav">
+        <a href="product.html" id="home-link" class="bubble-link">Home</a>
+        <a href="cart.html" class="active">Cart</a>
+      </nav>
+    </header>
+    <section class="main-content">
+      <div class="order-history-container">
+        <div style="display: flex; align-items: center;">
+          <h2>Order History</h2>
+          <button onclick="fetchOrderHistory('asc')" style="margin-left: 10px;">&#x2191;</button>
+          <button onclick="fetchOrderHistory('desc')" style="margin-left: 10px;">&#x2193;</button>
+        </div>
+        <div class="order-history-table-wrapper">
+          <table class="table-auto w-full" id="order-history-table">
+            <thead>
+              <tr>
+                <th>Item Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total Price</th>
+                <th>Date Of Purchase</th>
+              </tr>
+            </thead>
+            <tbody id="order-history-body">
+              <!-- Order history items will be dynamically added here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2024 CS 3360. All rights reserved.</p>
+    </footer>
+    <script src="js/renderHistory.js"></script>
+  </body>
+</html>
